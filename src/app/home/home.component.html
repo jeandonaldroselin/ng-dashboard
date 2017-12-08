@@ -1,11 +1,24 @@
 <div class="ui-grid-row">
-  <div class="ui-g-12 ui-md-12 ui-lg-4 ui-grid-responsive centered">
-    <app-user-acquisition-and-loss-chart [data]="userAcquisitionStatisticData"></app-user-acquisition-and-loss-chart>
+  <div class="ui-g-8 ui-md-8 ui-sm-12 ui-lg-8 ui-grid-responsive centered">
+    
+    <div class="ui-grid-row">
+      <div class="ui-g-6 ui-md-6 ui-sm-12 ui-lg-6 ui-grid-responsive centered">
+        <app-user-acquisition-and-loss-chart [data]="userAcquisitionStatisticData"></app-user-acquisition-and-loss-chart>
+      </div>
+      <div class="ui-g-6 ui-md-6 ui-sm-12 ui-lg-6 ui-grid-responsive centered">
+        <app-applications-states-wizard [data]="applicationStateData"></app-applications-states-wizard>
+      </div>
+    </div>
+    
+  
+    <div class="ui-grid-row">
+      <div class="ui-g-12 ui-md-12 ui-lg-12 ui-grid-responsive centered">
+        <app-calendar-relative-to-application-roadmap [data]="applicationRoadmapEventData"></app-calendar-relative-to-application-roadmap>
+      </div>
+    </div>
+    
   </div>
-  <div class="ui-g-12 ui-md-12 ui-lg-4 ui-grid-responsive centered">
-    <app-applications-states-wizard [data]="applicationStateData"></app-applications-states-wizard>
-  </div>
-  <div class="ui-g-12 ui-md-12 ui-lg-4 ui-grid-responsive centered">
+  <div class="ui-g-4 ui-md-4 ui-sm-12 ui-lg-4 ui-grid-responsive centered">
     Not available yet<br/>
     <p-progressSpinner></p-progressSpinner>
   </div>

@@ -2,6 +2,8 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {UserAcquisitionStatistic} from "../../shared/model/userAcquisitionStatistic";
 import {UserAcquisitionStatisticService} from "../../shared/services/userAcquisitionStatisticService";
 import "rxjs/add/operator/delay";
+import {ApplicationStateService} from "../../shared/services/applicationStateService";
+import {ApplicationState} from "../../shared/model/applicationState";
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,10 @@ export class HomeComponent implements OnInit {
   
   userAcquisitionStatisticData: UserAcquisitionStatistic;
   
-  constructor(@Inject('UserAcquisitionStatisticService') private userAcquisitionStatisticService: UserAcquisitionStatisticService) { }
+  applicationStateData: ApplicationState;
+  
+  constructor(@Inject('UserAcquisitionStatisticService') private userAcquisitionStatisticService: UserAcquisitionStatisticService,
+              @Inject('ApplicationStateService') private applicationStateService: ApplicationStateService) { }
 
   ngOnInit() {
     this.userAcquisitionStatisticService
@@ -20,7 +25,14 @@ export class HomeComponent implements OnInit {
       .delay(2000)
       .subscribe((data)=>{
       this.userAcquisitionStatisticData = data;
-    })
+    });
+    
+    this.applicationStateService
+      .get()
+      .delay(2500)
+      .subscribe((data)=>{
+        this.applicationStateData = data;
+      });
   }
 
 }

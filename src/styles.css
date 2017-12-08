@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Custom style for ng-prime components */
+/* Step */
+.ui-steps .ui-steps-item {
+  width: calc(100% / 3);
+  height: 12px !important;
+}
+
+.ui-steps.steps-custom {
+  margin-bottom: 30px;
+}
+
+.ui-state-highlight{
+  background-color: #0081c2 !important;
+  border: none;
+}
+
+.ui-steps.steps-custom .ui-steps-item .ui-menuitem-link {
+  height: 10px;
+  padding: 0 1em;
+}
+
+.ui-steps.steps-custom .ui-steps-item .ui-steps-number {
+  background-color: #0081c2;
+  color: #FFFFFF;
+  display: inline-block;
+  width: 36px;
+  border-radius: 50%;
+  margin-top: -14px;
+  margin-bottom: 10px;
+}
+
+.ui-steps.steps-custom .ui-steps-item .ui-steps-title {
+  color: #555555;
+}
+/* End - Step */
+/* End - Custom style for ng-prime components */

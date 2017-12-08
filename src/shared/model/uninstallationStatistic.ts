@@ -1,4 +1,4 @@
-export class UninstallationStatistic {
+export class UninstallationReasonsStatistic {
   
   labels: Array<string>;
   

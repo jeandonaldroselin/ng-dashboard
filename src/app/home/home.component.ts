@@ -7,7 +7,7 @@ import {ApplicationState} from "../../shared/model/applicationState";
 import {ApplicationRoadmapEventService} from "../../shared/services/applicationRoadmapEventService";
 import {RoadmapEvent} from "../../shared/model/roadmapEvent";
 import {UninstallationReasonsStatiscticService} from "../../shared/services/uninstallationReasonsStatiscticService";
-import {UninstallationStatistic} from "../../shared/model/uninstallationStatistic";
+import {UninstallationReasonsStatistic} from "../../shared/model/uninstallationStatistic";
 
 @Component({
   selector: 'app-home',
@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   
   applicationRoadmapEventData: Array<RoadmapEvent>;
   
-  uninstallationReasonsData: UninstallationStatistic;
+  uninstallationReasonsData: UninstallationReasonsStatistic;
   
   constructor(@Inject('UserAcquisitionStatisticService') private userAcquisitionStatisticService: UserAcquisitionStatisticService,
               @Inject('ApplicationStateService') private applicationStateService: ApplicationStateService,
@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
   
     this.uninstallationReasonsStatiscticService
       .get()
-      .delay(4500)
+      .delay(4000)
       .subscribe((data)=>{
         this.uninstallationReasonsData = data;
       });

@@ -1,8 +1,8 @@
 import {Observable} from "rxjs/Observable";
-import {UninstallationStatistic} from "../../model/uninstallationStatistic";
+import {UninstallationReasonsStatistic} from "../../model/uninstallationStatistic";
 
 export interface UninstallationReasonsStatisticRepository {
   
-  get(): Observable<UninstallationStatistic>;
+  get(): Observable<UninstallationReasonsStatistic>;
   
 }

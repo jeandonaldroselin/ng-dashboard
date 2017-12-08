@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {UninstallationReasonsStatistic} from "../../../shared/model/uninstallationStatistic";
 
 @Component({
   selector: 'app-ai-report-chart-for-user-loss-reasons',
@@ -7,7 +8,7 @@ import {Component, Input} from '@angular/core';
 })
 export class AiReportChartForUserLossReasonsComponent {
   
-  @Input() data: any;
+  @Input() data: UninstallationReasonsStatistic;
   
   constructor() { }
 

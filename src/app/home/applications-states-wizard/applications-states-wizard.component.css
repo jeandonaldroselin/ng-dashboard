@@ -1,0 +1,13 @@
+.tab {
+  height: 100%;
+  margin-top: 50px;
+  border: 1px solid #d3d3d36e;
+}
+
+.tab-col, .tab-row  {
+  height: 100%;
+}
+
+.tab-col {
+  border: 1px solid #d3d3d36e;
+}

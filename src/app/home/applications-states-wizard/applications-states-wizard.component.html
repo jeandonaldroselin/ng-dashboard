@@ -1,0 +1,52 @@
+<p-steps [model]="items" [(activeIndex)]="activeIndex" styleClass="steps-custom" [readonly]="false" *ngIf="items; else loading"></p-steps>
+
+<div *ngIf="activeIndex == 0 && items" class="tab">
+  <div class="ui-grid-row tab-row">
+    <div class="ui-g-12 ui-md-12 ui-lg-6 ui-grid-responsive tab-col">
+      Android
+      <p>
+        Last version: {{ data.android.lastVersion }}<br/>
+        Status : {{ data.android.status }}<br/>
+        Opened Issues : {{ data.android.openedIssues }}
+      </p>
+    </div>
+    <div class="ui-g-12 ui-md-12 ui-lg-6 ui-grid-responsive tab-col">
+      IOS
+      <p>
+        Last version: {{ data.ios.lastVersion }}<br/>
+        Status : {{ data.ios.status }}<br/>
+        Opened Issues : {{ data.ios.openedIssues }}
+      </p>
+    </div>
+  </div>
+</div>
+<div *ngIf="activeIndex == 1 && items" class="tab">
+  <div class="ui-grid-row tab-row">
+    <div class="ui-g-12 ui-md-12 ui-lg-12 ui-grid-responsive tab-col">
+      Web Board
+      <p>
+        Last version: {{ data.clientBoard.lastVersion }}<br/>
+        Status : {{ data.clientBoard.status }}<br/>
+        Opened Issues : {{ data.clientBoard.openedIssues }}
+      </p>
+    </div>
+  </div>
+</div>
+<div *ngIf="activeIndex == 2 && items" class="tab">
+  <div class="ui-grid-row tab-row">
+    <div class="ui-g-12 ui-md-12 ui-lg-12 ui-grid-responsive tab-col">
+      Web Board
+      <p>
+        Last version: {{ data.trainerBoard.lastVersion }}<br/>
+        Status : {{ data.trainerBoard.status }}<br/>
+        Opened Issues : {{ data.trainerBoard.openedIssues }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  Loading applications states wizard<br/>
+  <p-progressSpinner></p-progressSpinner>
+</ng-template>
+

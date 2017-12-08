@@ -1,0 +1,7 @@
+<p-schedule [events]="events" *ngIf="events; else loading"></p-schedule>
+
+<ng-template #loading>
+  Loading application roadmap<br/>
+  <p-progressSpinner></p-progressSpinner>
+</ng-template>
+

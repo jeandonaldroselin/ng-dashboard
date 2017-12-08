@@ -4,6 +4,8 @@ import {UserAcquisitionStatisticService} from "../../shared/services/userAcquisi
 import "rxjs/add/operator/delay";
 import {ApplicationStateService} from "../../shared/services/applicationStateService";
 import {ApplicationState} from "../../shared/model/applicationState";
+import {ApplicationRoadmapEventService} from "../../shared/services/applicationRoadmapEventService";
+import {RoadmapEvent} from "../../shared/model/roadmapEvent";
 
 @Component({
   selector: 'app-home',
@@ -16,8 +18,11 @@ export class HomeComponent implements OnInit {
   
   applicationStateData: ApplicationState;
   
+  applicationRoadmapEventData: Array<RoadmapEvent>;
+  
   constructor(@Inject('UserAcquisitionStatisticService') private userAcquisitionStatisticService: UserAcquisitionStatisticService,
-              @Inject('ApplicationStateService') private applicationStateService: ApplicationStateService) { }
+              @Inject('ApplicationStateService') private applicationStateService: ApplicationStateService,
+              @Inject('ApplicationRoadmapEventService') private applicationRoadmapEventService: ApplicationRoadmapEventService) { }
 
   ngOnInit() {
     this.userAcquisitionStatisticService
@@ -33,6 +38,14 @@ export class HomeComponent implements OnInit {
       .subscribe((data)=>{
         this.applicationStateData = data;
       });
+    
+    this.applicationRoadmapEventService
+      .get()
+      .delay(3500)
+      .subscribe((data)=>{
+        this.applicationRoadmapEventData = data;
+      });
+    
   }
 
 }

@@ -1,0 +1,11 @@
+<h2 *ngIf="data">
+  Analysis of unistallation reasons by AI
+</h2>
+
+<p-chart type="pie" [data]="data" *ngIf="data; else loading"></p-chart>
+
+<ng-template #loading>
+  Loading user acquisition statistics<br/>
+  <p-progressSpinner></p-progressSpinner>
+</ng-template>
+

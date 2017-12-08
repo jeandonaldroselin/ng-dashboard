@@ -4,7 +4,7 @@ import { HomeComponent } from "./home.component";
 import { ChartModule } from "primeng/primeng";
 import { ProgressSpinnerModule } from "primeng/primeng";
 import { StepsModule } from 'primeng/primeng';
-import { UserAcquisitionStatisticInMemoryProxy } from "../../shared/api/inMemoryProxy/userAcquisitionStatisticInMemoryProxy";
+import { UninstallationReasonsStatisticInMemoryProxy } from "../../shared/api/inMemoryProxy/uninstallationReasonsStatisticInMemoryProxy";
 import { UserAcquisitionStatisticService } from "../../shared/services/userAcquisitionStatisticService";
 import { CommonModule } from "@angular/common";
 import { ApplicationsStatesWizardComponent } from './applications-states-wizard/applications-states-wizard.component';
@@ -14,13 +14,17 @@ import { CalendarRelativeToApplicationRoadmapComponent } from './calendar-relati
 import { ScheduleModule } from 'primeng/primeng';
 import {ApplicationRoadmapEventService} from "../../shared/services/applicationRoadmapEventService";
 import {ApplicationRoadmapEventInMemoryProxy} from "../../shared/api/inMemoryProxy/applicationRoadmapEventInMemoryProxy";
+import { AiReportChartForUserLossReasonsComponent } from './ai-report-chart-for-user-loss-reasons/ai-report-chart-for-user-loss-reasons.component';
+import {UninstallationReasonsStatiscticService} from "../../shared/services/uninstallationReasonsStatiscticService";
+import {UserAcquisitionStatisticInMemoryProxy} from "../../shared/api/inMemoryProxy/userAcquisitionStatisticInMemoryProxy";
 
 @NgModule({
   declarations: [
     HomeComponent,
     UserAcquisitionAndLossChartComponent,
     ApplicationsStatesWizardComponent,
-    CalendarRelativeToApplicationRoadmapComponent
+    CalendarRelativeToApplicationRoadmapComponent,
+    AiReportChartForUserLossReasonsComponent
   ],
   imports: [
     ChartModule,
@@ -46,6 +50,12 @@ import {ApplicationRoadmapEventInMemoryProxy} from "../../shared/api/inMemoryPro
       provide : 'ApplicationRoadmapEventService',
       useFactory: function() {
         return new ApplicationRoadmapEventService(new ApplicationRoadmapEventInMemoryProxy())
+      }
+    },
+    {
+      provide : 'UninstallationReasonsStatiscticService',
+      useFactory: function() {
+        return new UninstallationReasonsStatiscticService(new UninstallationReasonsStatisticInMemoryProxy())
       }
     }
   ],

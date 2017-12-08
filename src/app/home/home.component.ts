@@ -6,6 +6,8 @@ import {ApplicationStateService} from "../../shared/services/applicationStateSer
 import {ApplicationState} from "../../shared/model/applicationState";
 import {ApplicationRoadmapEventService} from "../../shared/services/applicationRoadmapEventService";
 import {RoadmapEvent} from "../../shared/model/roadmapEvent";
+import {UninstallationReasonsStatiscticService} from "../../shared/services/uninstallationReasonsStatiscticService";
+import {UninstallationStatistic} from "../../shared/model/uninstallationStatistic";
 
 @Component({
   selector: 'app-home',
@@ -20,9 +22,12 @@ export class HomeComponent implements OnInit {
   
   applicationRoadmapEventData: Array<RoadmapEvent>;
   
+  uninstallationReasonsData: UninstallationStatistic;
+  
   constructor(@Inject('UserAcquisitionStatisticService') private userAcquisitionStatisticService: UserAcquisitionStatisticService,
               @Inject('ApplicationStateService') private applicationStateService: ApplicationStateService,
-              @Inject('ApplicationRoadmapEventService') private applicationRoadmapEventService: ApplicationRoadmapEventService) { }
+              @Inject('ApplicationRoadmapEventService') private applicationRoadmapEventService: ApplicationRoadmapEventService,
+              @Inject('UninstallationReasonsStatiscticService') private uninstallationReasonsStatiscticService: UninstallationReasonsStatiscticService) { }
 
   ngOnInit() {
     this.userAcquisitionStatisticService
@@ -38,12 +43,19 @@ export class HomeComponent implements OnInit {
       .subscribe((data)=>{
         this.applicationStateData = data;
       });
-    
+  
     this.applicationRoadmapEventService
       .get()
       .delay(3500)
       .subscribe((data)=>{
         this.applicationRoadmapEventData = data;
+      });
+  
+    this.uninstallationReasonsStatiscticService
+      .get()
+      .delay(4500)
+      .subscribe((data)=>{
+        this.uninstallationReasonsData = data;
       });
     
   }

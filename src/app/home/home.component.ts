@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
   
     this.uninstallationReasonsStatiscticService
       .get()
-      .delay(4000)
+      .delay(3500)
       .subscribe((data)=>{
         this.uninstallationReasonsData = data;
       });
@@ -61,3 +61,31 @@ export class HomeComponent implements OnInit {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

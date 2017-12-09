@@ -18,6 +18,7 @@ import { AiReportChartForUserLossReasonsComponent } from './ai-report-chart-for-
 import {UninstallationReasonsStatiscticService} from "../../shared/services/uninstallationReasonsStatiscticService";
 import {UserAcquisitionStatisticInMemoryProxy} from "../../shared/api/inMemoryProxy/userAcquisitionStatisticInMemoryProxy";
 import {PanelModule} from 'primeng/primeng';
+import {DragDropModule} from 'primeng/primeng';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
@@ -34,6 +35,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     StepsModule,
     ScheduleModule,
     PanelModule,
+    DragDropModule,
     BrowserAnimationsModule,
     CommonModule
   ],

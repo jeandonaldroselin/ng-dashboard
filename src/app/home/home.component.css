@@ -6,3 +6,7 @@ app-applications-states-wizard {
   margin-top: 12px;
   display: block;
 }
+
+.ui-grid-responsive {
+  padding: 20px;
+}

@@ -1,17 +1,23 @@
 <!-- User acquisition/loss chart + applications states wizard -->
 <div class="ui-grid-row">
   <div class="ui-g-6 ui-md-6 ui-sm-12 ui-lg-6 ui-grid-responsive centered">
-    <app-user-acquisition-and-loss-chart [data]="userAcquisitionStatisticData"></app-user-acquisition-and-loss-chart>
+    <p-panel header="User acquisition and loss">
+      <app-user-acquisition-and-loss-chart [data]="userAcquisitionStatisticData"></app-user-acquisition-and-loss-chart>
+    </p-panel>
   </div>
   <div class="ui-g-6 ui-md-6 ui-sm-12 ui-lg-6 ui-grid-responsive centered">
-    <app-applications-states-wizard [data]="applicationStateData"></app-applications-states-wizard>
+    <p-panel header="Applications States">
+      <app-applications-states-wizard [data]="applicationStateData"></app-applications-states-wizard>
+    </p-panel>
   </div>
 </div>
 
 <!-- Roadmap calendar -->
 <div class="ui-grid-row">
   <div class="ui-g-8 ui-md-8 ui-sm-12 ui-lg-8 ui-grid-responsive centered">
-    <app-calendar-relative-to-application-roadmap [data]="applicationRoadmapEventData"></app-calendar-relative-to-application-roadmap>
+    <p-panel header="Application Roadmap">
+      <app-calendar-relative-to-application-roadmap [data]="applicationRoadmapEventData"></app-calendar-relative-to-application-roadmap>
+    </p-panel>
   </div>
   <div class="ui-g-4 ui-md-4 ui-sm-12 ui-lg-4 ui-grid-responsive centered">
     Not available yet<br/>
@@ -22,6 +28,8 @@
 <!-- Artificiel Intelligence Reports about user loss reasons -->
 <div class="ui-grid-row">
   <div class="ui-g-7 ui-md-7 ui-lg-7 ui-sm-12 ui-grid-responsive centered">
-    <app-ai-report-chart-for-user-loss-reasons [data]="uninstallationReasonsData"></app-ai-report-chart-for-user-loss-reasons>
+    <p-panel header="Artificiel Intelligence user loss reasons analyze">
+      <app-ai-report-chart-for-user-loss-reasons [data]="uninstallationReasonsData"></app-ai-report-chart-for-user-loss-reasons>
+    </p-panel>
   </div>
 </div>

@@ -13,8 +13,8 @@ export class UserAcquisitionStatisticInMemoryProxy implements UserAcquisitionSta
             [
               {
                 label: 'User acquisition',
-                backgroundColor: '#42A5F5',
-                borderColor: '#1E88E5',
+                backgroundColor: '#008000',
+                borderColor: '#008000',
                 data: [65, 59, 80, 81, 56, 55, 40]
               },
               {

@@ -17,6 +17,8 @@ import {ApplicationRoadmapEventInMemoryProxy} from "../../shared/api/inMemoryPro
 import { AiReportChartForUserLossReasonsComponent } from './ai-report-chart-for-user-loss-reasons/ai-report-chart-for-user-loss-reasons.component';
 import {UninstallationReasonsStatiscticService} from "../../shared/services/uninstallationReasonsStatiscticService";
 import {UserAcquisitionStatisticInMemoryProxy} from "../../shared/api/inMemoryProxy/userAcquisitionStatisticInMemoryProxy";
+import {PanelModule} from 'primeng/primeng';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import {UserAcquisitionStatisticInMemoryProxy} from "../../shared/api/inMemoryPr
     ProgressSpinnerModule,
     StepsModule,
     ScheduleModule,
+    PanelModule,
+    BrowserAnimationsModule,
     CommonModule
   ],
   providers: [

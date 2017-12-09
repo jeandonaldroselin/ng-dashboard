@@ -1,31 +1,35 @@
-@media screen and (max-width: 750px) {
-  #left-menu {
-    width: 29px !important;
-  }
+#header {
+  background: black;
+  color: white;
+  padding: 15px;
+}
 
-  #left-menu ul > li .icon, #left-menu ul > li .content {
-    display: none;
-  }
+#body {
+  height: 100%;
+}
 
-  #left-menu ul > li > .icon {
-    display: block;
-    float: none !important;
-  }
+#announcement {
+  height: 200px;
+  padding-top: 100px;
+  background: rgba(0, 0, 0, 0.1);
+}
 
-  #right-container {
-    width: calc(100% - 30px) !important;
-  }
+#announcement > h1 {
+  text-align: center;
 }
 
 #left-menu {
   width: 199px;
   float: left;
-  background: #186ba0;
-  height: 100%;
+  height: 250%;
   color: #FFFFFF;
-  border-top: 1px solid #d3d3d36e;
   border-right: 1px solid #d3d3d36e;
   border-bottom: 1px solid #d3d3d36e;
+  background: #186ba0; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, #175F91, #186ba0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #175F91, #186ba0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #175F91, #186ba0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #175F91, #186ba0); /* Standard syntax */
 }
 
 #left-menu ul {
@@ -48,7 +52,31 @@
   text-align: center;
 }
 
+#left-menu ul > li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
 #right-container {
   width: calc(100% - 200px);
   float: left;
+}
+
+@media screen and (max-width: 750px) {
+  #left-menu {
+    width: 29px !important;
+  }
+
+  #left-menu ul > li .icon, #left-menu ul > li .content {
+    display: none;
+  }
+
+  #left-menu ul > li > .icon {
+    display: block;
+    float: none !important;
+  }
+
+  #right-container {
+    width: calc(100% - 30px) !important;
+  }
 }

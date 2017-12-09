@@ -1,41 +1,51 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div id="left-menu">
-  <ul>
-    <li>
-      <div class = "icon">
-        <i class="fa fa-home"></i>
-      </div>
-      <div class = "content"> NG Dashboard !</div>
-    </li>
-    <li>
-      <div class = "icon">
-        <i class="fa fa-superpowers"></i>
-      </div>
-      <div class = "content"> Social Network</div>
-    </li>
-    <li>
-      <div class = "icon">
-        <i class="fa fa-database"></i>
-      </div>
-      <div class = "content"> Database</div>
-    </li>
-    <li>
-      <div class = "icon">
-        <i class="fa fa-diamond"></i>
-      </div>
-      <div class = "content"> Trainers</div>
-    </li>
-    <li>
-      <div class = "icon">
-        <i class="fa fa-cog"></i>
-      </div>
-      <div class = "content"> Settings</div>
-    </li>
-  </ul>
+<div id="header">
+  header
 </div>
-<div id="right-container">
-
-  <router-outlet></router-outlet>
+<div id="body">
+  <div id="left-menu">
+    <ul>
+      <li>
+        <div class = "icon">
+          <i class="fa fa-home"></i>
+        </div>
+        <div class = "content"> NG Dashboard !</div>
+      </li>
+      <li>
+        <div class = "icon">
+          <i class="fa fa-superpowers"></i>
+        </div>
+        <div class = "content"> Social Network</div>
+      </li>
+      <li>
+        <div class = "icon">
+          <i class="fa fa-database"></i>
+        </div>
+        <div class = "content"> Database</div>
+      </li>
+      <li>
+        <div class = "icon">
+          <i class="fa fa-diamond"></i>
+        </div>
+        <div class = "content"> Trainers</div>
+      </li>
+      <li>
+        <div class = "icon">
+          <i class="fa fa-cog"></i>
+        </div>
+        <div class = "content"> Settings</div>
+      </li>
+    </ul>
+  </div>
+  <div id="right-container">
   
+    <div id="announcement">
+      <h1>Welcome to {{ title }} !</h1>
+    </div>
+    <div id="contenair">
+      <router-outlet></router-outlet>
+    </div>
+    
+  </div>
 </div>
 
